@@ -64,13 +64,21 @@ El proyecto implementa autenticación con JWT. Los archivos de seguridad incluye
 src
 ├── main
 │   ├── java/com/universidad/
-│   │   ├── config/         # Configuración (Swagger, CORS, Seguridad, etc.)
-│   │   ├── controller/     # Controladores REST: Auth, Usuario, Materia, etc.
+│   │   ├── config/         # Configuración (Swagger, etc.)
+│   │   ├── controller/     # Controladores REST: Usuario, Materia, etc.
 │   │   ├── dto/            # DTOs para transferencia de datos
-│   │   ├── entity/         # Entidades JPA (Estudiante, Materia, etc.)
+│   │   ├── model/          # Entidades JPA (Estudiante, Materia, etc.)
 │   │   ├── repository/     # Repositorios JPA
 │   │   ├── service/        # Lógica de negocio
-│   │   └── MiProyectoApplication.java  # Clase principal (@SpringBootApplication)
+│   │   ├── registro/       # Lógica de Login
+│   │   │   ├── config/       # Configuración (CORS, Seguridad)
+│   │   │   ├── controller/   # Controladores REST: Auth, Usuario
+│   │   │   ├── dto/          # Lógica de negocio (Auth)
+│   │   │   ├── model/        # Entidades JPA (Rol, Usuario)
+│   │   │   ├── repository/   # Repositorios JPA
+│   │   │   ├── security/     # Lógica de seguridad
+│   │   │   ├── service/      # Lógica de negocio
+│   │   └── UniversidadApplication.java  # Clase principal (@SpringBootApplication)
 │   └── resources/
 │       ├── application.properties
 │       └── schema.sql / data.sql (si corresponde)
